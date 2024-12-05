@@ -20,10 +20,9 @@ def AR_prep(data_frame,x_col_names,y_col_name,lag,RNN=True):
     df_new= np.zeros((df.shape[0]-lag,df.shape[1]*lag))
     n=np.where(data_frame.columns==y_col_name)[0][0]
 
-    l=np.arange(df.shape[1])
     for i in range(df.shape[1]):
         for j in range(1,lag+1):
-            df_new[:,j+l[i]*lag-1]=df.iloc[j-1:-lag+j-1,i]
+            df_new[:,j+i*lag-1]=df.iloc[j-1:-lag+j-1,i]
     
     #if RNN is the target, then this code will be excuted
     if RNN==True:
