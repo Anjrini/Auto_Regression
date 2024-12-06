@@ -1,6 +1,6 @@
 # RNN and Auto_Regression - Automation of the Data Preparation
 
-When using the RNN or Auto Regression method, there is some pre-work quite lengthy to be done in preparing the data to be used in as an array format for the RNN or as a data frame for the Auto Regression. 
+When using the RNN or Auto Regression method, there is some pre-work quite lengthy to be done in preparing the data to be used as an array format for the RNN or as a data frame for the Auto Regression. 
 The idea of this code to take the work off your shoulder and get the final data ready for either the RNN implementation or the Auto Regression. This code has been implemented in the file named RNN_Preparation_Function.py with the function named AR_prep.
 
 The input of this function is:
