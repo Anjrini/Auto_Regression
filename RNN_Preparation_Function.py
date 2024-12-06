@@ -24,7 +24,7 @@ def AR_prep(data_frame,x_col_names,y_col_name,lag,RNN=True):
         for j in range(1,lag+1):
             df_new[:,j+i*lag-1]=df.iloc[j-1:-lag+j-1,i]
     
-    #if RNN is the target, then this code will be excuted
+    #if RNN is the target, then this code will be executed
     if RNN==True:
         df_new_rnn=df_new.reshape((df_new.shape[0],df.shape[1],lag))        
         df_new_rnn=np.transpose(df_new_rnn,axes=[0,2,1])
@@ -35,6 +35,8 @@ def AR_prep(data_frame,x_col_names,y_col_name,lag,RNN=True):
         #creating a list of the results(new data frame and response)
         z=list([df_new_rnn,y1])
     else:
+        # if the implementation of the Auto Regression is the target, then
+        # this code will be executed
         #creating the name of the columns of the new data frame
         hh=[]
         for j in df.columns:
